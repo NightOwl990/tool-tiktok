@@ -1,0 +1,6 @@
+praw
+python-dotenv
+pandas
+streamlit
+SQLAlchemy
+python-dateutil
