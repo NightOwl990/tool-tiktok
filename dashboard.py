@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 
+from bootstrap import ensure_seed_data
 from analytics import pillar_performance_summary
 from db import PostedVideo, TrendItem, get_session
 from idea_generator import generate_idea
@@ -363,6 +364,8 @@ def set_status(item_id, status):
 
 st.title(t("app_title"))
 st.caption(t("app_caption"))
+
+ensure_seed_data()
 
 session = get_session()
 df = load_trend_dataframe(session)
